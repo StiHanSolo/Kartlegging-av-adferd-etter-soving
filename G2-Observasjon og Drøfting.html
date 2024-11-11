@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedagogisk Observasjonsdokument</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            border-bottom: 1px solid #ddd;
+            padding: 16px;
+            text-align: left;
+        }
+        th {
+            background-color: #34495e;
+            color: #ecf0f1;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        .observation-comment {
+            color: #007BFF;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .comment-box {
+            display: none;
+            margin-top: 10px;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-family: 'Roboto', sans-serif;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .comment-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+        .comment-button:hover {
+            background-color: #0056b3;
+        }
+        .comment-button:active {
+            transform: scale(0.98);
+        }
+    </style>
+    <script>
+        function toggleCommentBox(id) {
+            var box = document.getElementById(id);
+            if (box.style.display === "none" || box.style.display === "") {
+                box.style.display = "block";
+            } else {
+                box.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Pedagogisk Observasjonsdokument</h1>
+    <p><strong>Barnets navn:</strong> [ikke oppgitt]</p>
+    <p><strong>Alder:</strong> 2 år</p>
+    <p><strong>Dato for observasjon:</strong> 11.11.2024</p>
+    <p><strong>Observatør:</strong> Vikar, mann, 20 år</p>
+
+    <h2>Bakgrunn</h2>
+    <p>Gutten på 2 år viser en tendens til utagering i visse intense situasjoner innendørs, spesielt når det er mye lys, støy, og mange barn tilstede...</p>
+
+    <h2>Observasjoner etter søvn</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Tidspunkt</th>
+                <th>Observasjon</th>
+                <th>Kommentar/Diskusjon</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0-5 min</td>
+                <td>Slo på en lekende måte</td>
+                <td>
+                    Indikerer et forsøk på sosial interaksjon, men trenger støtte for å lære passende måter å initiere lek på.
+                    <span class="observation-comment" onclick="toggleCommentBox('comment1')">Legg til kommentar</span>
+                    <div id="comment1" class="comment-box">
+                        <textarea rows="3" placeholder="Skriv din kommentar her..."></textarea><br>
+                        <button class="comment-button" onclick="toggleCommentBox('comment1')">Lagre kommentar</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>5-10 min</td>
+                <td>Deler leker med de mindre</td>
+                <td>
+                    Viser positiv sosial adferd, deling kan være en mestringsstrategi for å føle seg inkludert.
+                    <span class="observation-comment" onclick="toggleCommentBox('comment2')">Legg til kommentar</span>
+                    <div id="comment2" class="comment-box">
+                        <textarea rows="3" placeholder="Skriv din kommentar her..."></textarea><br>
+                        <button class="comment-button" onclick="toggleCommentBox('comment2')">Lagre kommentar</button>
+                    </div>
+                </td>
+            </tr>
+            <!-- Flere observasjoner kan legges til på samme måte -->
+        </tbody>
+    </table>
+
+    <h2>Diskusjon og refleksjon</h2>
+    <p>Observasjonene indikerer at gutten har et godt potensial for positiv sosial interaksjon, men at han ofte benytter fysiske uttrykk...</p>
+    <div>
+        <textarea rows="5" placeholder="Skriv dine refleksjoner her..."></textarea>
+    </div>
+
+    <h2>Tiltak</h2>
+    <ol>
+        <li><strong>Rolig oppvåkning:</strong> Når gutten våkner, hold ham i et rolig miljø for å hjelpe med å stabilisere følelsene før han går inn i mer intense sosiale situasjoner.</li>
+        <li><strong>Sansestimulering:</strong> Bruk sansestimulerende aktiviteter på hemsen for å hjelpe ham å regulere seg selv.</li>
+        <li><strong>Veiledning i sosial interaksjon:</strong> Støtt gutten i å finne måter å initiere lek uten å slå eller dytte, for eksempel ved bruk av visuelle tegn eller peke på alternative handlinger.</li>
+    </ol>
+
+    <h2>Neste skritt</h2>
+    <p>La oss prøve dette tiltaket med hemsen i morgen, og følge med på hvordan gutten reagerer på den endrede oppvåkningssituasjonen...</p>
+</body>
+</html>
